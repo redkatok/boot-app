@@ -42,9 +42,9 @@ public class TestController {
 
     }
 
-    @PutMapping("topics/{id}")
+    @PutMapping("topics")
     public void updateTopic(@RequestBody Topic topic, @PathVariable String id) {
-        topicService.updateTopic(id, topic);
+        topicService.updateTopic(topic);
         System.out.println(topic.toString() + " " + "successfully updated");
     }
 
